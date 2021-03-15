@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#put this line in .bashrc
+#[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+alias \
+    myip='curl ipinfo.io/ip' \
+    untar='tar -xvf' \
+    cp='cp -iv' \
+    rm='rm -v' \
+    mv='mv -iv' \
+    yt='youtube-dl -f 18' \
+    fcnt='find . -type f | wc -l' \
+    dcnt='find ./* -type d | wc -l' \
+    lss='ls --human-readable --size -1 -S --classify' \
+    plall='mpv --shuffle /home/user/Music/Music_Videos' \
+    ytpl='youtube-dl -f 18 --output "%(playlist_index)s-%(title)s.%(ext)s"' \
+    :q='echo E37: No write since last change \(add ! to override\)' \
+    :q!='exit' \
+    e='exit' \
+    c='clear' \
+    roff='function _(){ groff -ms -T utf8 $1 | less -R; }; _' \
+    scrot='function _(){ scrot ~/Pictures/Scrot/$1~%F~%R:%S.png; }; _' \
+    mkdir='mkdir -p'
+####
+#fcnt = count files going forward in tree, including pwd
+#dcnt =  count directories going forward in tree, excluding pwd
+#yt = download 360p (lowest mb)
+#ytpl = download a playlist and keep playlist order in directory(360p)
+#roff = display -ms macro documents to terminal screen, call it with 'roff file-name.ms'
+#scrot = arguments to scrot will be inserted into filename before date
+####
